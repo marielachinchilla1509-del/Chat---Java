@@ -20,7 +20,7 @@ public class Servidor extends Thread
     ServerSocket sfd = null;
     try
     {
-      sfd = new ServerSocket(8000);
+      ServerSocket sfd = new ServerSocket(Integer.parseInt(System.getenv("PORT")));
     }
     catch (IOException ioe)
     {
