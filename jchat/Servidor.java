@@ -18,15 +18,13 @@ public class Servidor extends Thread
   public static void main (String args[])
   {
     ServerSocket sfd = null;
-    try
-    {
-      ServerSocket sfd = new ServerSocket(Integer.parseInt(System.getenv("PORT")));
-    }
-    catch (IOException ioe)
-    {
-      System.out.println("Comunicación rechazada."+ioe);
-      System.exit(1);
-    }
+
+try {
+    sfd = new ServerSocket(Integer.parseInt(System.getenv("PORT")));
+} catch (IOException ioe) {
+    System.out.println("Comunicación rechazada." + ioe);
+    System.exit(1);
+}
         while (true)
     {
       try
